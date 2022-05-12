@@ -34,14 +34,17 @@
 *,
 *::before,
 *::after {
-  overflow: hidden;
   box-sizing: border-box; }
 
+*:focus {
+    outline: 0 !important;
+}
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth; } }
 
 body {
+  position: relative;
   margin: 0;
   font-family: var(--bs-font-sans-serif);
   font-size: 1rem;
@@ -4083,7 +4086,8 @@ textarea.form-control-lg {
   padding: 0.75rem; }
 
 .modal-open {
-  overflow: hidden; }
+  overflow: hidden; 
+}
   .modal-open .modal {
     overflow-x: hidden;
     overflow-y: auto; }
@@ -9726,8 +9730,8 @@ a {
   border-radius: 50%; }
   .icn-circle .fa, .icn-circle svg, .icn-circle i, .icn-circle img, .btn-circle .fa, .btn-circle svg, .btn-circle i, .btn-circle img, .circle-box .fa, .circle-box svg, .circle-box i, .circle-box img, .circle .fa, .circle svg, .circle i, .circle img {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 41%;
+    left: 53%;
     transform: translate(-50%, -50%); }
 
 .circle-xl, .circle-lg, .circle-md, .circle-sm, .circle-xs {
@@ -9791,6 +9795,43 @@ i.icon {
 img {
   max-width: 100%; }
 
+ /* modal view  */
+
+ .modal_view{
+  display: none;
+  z-index: 1000;
+  position: fixed; 
+  left: 0;
+  top: 0;
+   width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto;
+  margin: 0 auto;
+  background-color: #191c1f;
+}
+
+.modal_view_active{
+  display: block;
+}
+
+.my_fr{
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-right: 400px;
+  padding-left: 400px;
+  margin: 0 auto;
+
+}
+.close_btn{
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+
+}
 .hero {
   position: relative;
   overflow: hidden; }

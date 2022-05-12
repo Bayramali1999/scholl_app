@@ -73,3 +73,13 @@ $('.owl-carousel.5-items').owlCarousel({
         }
     }
 })
+
+$('.btn-circle').click(function() {
+        $('.modal_view').addClass('modal_view_active');
+        $("body").css("overflow","hidden");
+  });
+
+$('.close_btn').click(function(){
+    $('.modal_view').removeClass("modal_view_active");
+    $("body").css("overflow","auto");
+});
