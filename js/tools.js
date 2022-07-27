@@ -83,3 +83,4 @@ $('.close_btn').click(function(){
     $('.modal_view').removeClass("modal_view_active");
     $("body").css("overflow","auto");
 });
+
